@@ -1,0 +1,106 @@
+{
+  "houseCuspsAndSandhi": [
+    {
+      "type": "TABLE",
+      "heading": "House Cusps And Sandhi",
+      "data": [
+        {
+          "house": 1,
+          "degree": "24:45:27",
+          "sign": "Aries",
+          "sign_lord": "Mars",
+          "start_lord": "Venus",
+          "sub_lord": "Mercury"
+        },
+        {
+          "house": 2,
+          "degree": "52:25:37",
+          "sign": "Taurus",
+          "sign_lord": "Venus",
+          "start_lord": "Moon",
+          "sub_lord": "Venus"
+        },
+        {
+          "house": 3,
+          "degree": "75:51:56",
+          "sign": "Gemini",
+          "sign_lord": "Mercury",
+          "start_lord": "Rahu",
+          "sub_lord": "Venus"
+        },
+        {
+          "house": 4,
+          "degree": "99:43:23",
+          "sign": "Cancer",
+          "sign_lord": "Moon",
+          "start_lord": "Saturn",
+          "sub_lord": "Venus"
+        },
+        {
+          "house": 5,
+          "degree": "127:56:12",
+          "sign": "Leo",
+          "sign_lord": "Sun",
+          "start_lord": "Ketu",
+          "sub_lord": "Jupiter"
+        },
+        {
+          "house": 6,
+          "degree": "163:48:49",
+          "sign": "Virgo",
+          "sign_lord": "Mercury",
+          "start_lord": "Moon",
+          "sub_lord": "Rahu"
+        },
+        {
+          "house": 7,
+          "degree": "204:45:27",
+          "sign": "Libra",
+          "sign_lord": "Venus",
+          "start_lord": "Jupiter",
+          "sub_lord": "Mercury"
+        },
+        {
+          "house": 8,
+          "degree": "232:25:37",
+          "sign": "Scorpio",
+          "sign_lord": "Mars",
+          "start_lord": "Mercury",
+          "sub_lord": "Moon"
+        },
+        {
+          "house": 9,
+          "degree": "255:51:56",
+          "sign": "Sagittarius",
+          "sign_lord": "Jupiter",
+          "start_lord": "Venus",
+          "sub_lord": "Sun"
+        },
+        {
+          "house": 10,
+          "degree": "279:43:23",
+          "sign": "Capricorn",
+          "sign_lord": "Saturn",
+          "start_lord": "Sun",
+          "sub_lord": "Venus"
+        },
+        {
+          "house": 11,
+          "degree": "307:56:12",
+          "sign": "Aquarius",
+          "sign_lord": "Saturn",
+          "start_lord": "Rahu",
+          "sub_lord": "Rahu"
+        },
+        {
+          "house": 12,
+          "degree": "343:48:49",
+          "sign": "Pisces",
+          "sign_lord": "Jupiter",
+          "start_lord": "Saturn",
+          "sub_lord": "Rahu"
+        }
+      ]
+    }
+  ]
+}

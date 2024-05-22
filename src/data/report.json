@@ -1,0 +1,61 @@
+{
+  "report": {
+    "favourablePoints": [
+      {
+        "type": "KEY_VALUE",
+        "heading": "Favourable Points",
+        "data": {
+          "name": "Sumit Gupta",
+          "date_of_birth": "9-2-1999",
+          "destiny_number": 3,
+          "radical_number": 9,
+          "name_number": 4,
+          "evil_number": "7",
+          "favourite_colour": "Brick Red",
+          "favourite_day": "Tuesday, Wednesday, Friday",
+          "favourite_god": "Hanuman",
+          "favourite_mantra": "|| Om Ang Angaarakaay Namah ||",
+          "favourite_metal": "Copper",
+          "favourite_stone": "Red coral",
+          "favourite_substones": "Sangmoongi",
+          "friendly_numbers": "1,2,3,6",
+          "neutral_number": "4,5,8",
+          "radical_ruler": "Mars"
+        }
+      }
+    ],
+    "numerologyReport": [
+      {
+        "type": "PARAGRAPH",
+        "heading": "Radical Number",
+        "data": [
+          " Your Radical number is 9. Its ruler is Mars. Mars is regarded as commander - in - chief of planet. Therefore you will also have a desire to become a General, chief, leader etc in social field. You would like to monopolize in your job or business.  By virtue of your inherent courage, you will cross hurdles easily by showing daring and nerves. By nature, you will be quick and in hurry. You will strive to finish your work as early as possible.  As you are a headstrong person, you should keep yourself away from reckless ventures. You are disciplined your self and appreciate discipline from others.  You may be misled by flattery and sycophancy, which may harm you. Keep yourself away from sycophants.  You may be a short-tempered person due to the influence of Mars. This will generate many opponents for you.  Though, your enemies will be less, as you will ever have capacity to crush your enemies.You may suffer from diseases related to fire elements. Therefore, you are advised to remain calm and quite for good luck. "
+        ]
+      },
+      {
+        "type": "PARAGRAPH",
+        "heading": "Favourable Time",
+        "data": [
+          " According to western view Sun remains in Aries from 23rd March to 20th April and in Scorpio from 24th October to 21st November. According to Indian thought this period is from 13th April to 12th May and from 14th November to 14th December.  The Aries and Scorpio are own signs of the Mars. Therefore above mentioned periods are lucky for Radical number 9 persons for initiating any new or important work. "
+        ]
+      },
+      {
+        "type": "PARAGRAPH",
+        "heading": "Favourable Gayatri Mantra",
+        "data": [
+          " You should recite Mangal Gayatri Mantra daily in the morning after bath, 11, 21 or 108 times for benefic effects.  The mangal (Mars) Gayatri Mantra.  || \"Om Angarkay Vidmahe Shaktihastay Dheemhi Tanno Bhaumah Prachodyat\" || "
+        ]
+      }
+    ],
+    "ascendantReport": [
+      {
+        "type": "KEY_PARAGRAPH",
+        "heading": "Ascendant Report",
+        "data": {
+          "ascendant": "Aries",
+          "report": "People with Aries rising tend to be energetic, pioneering, rash, argumentative, selfish, impulsive, quick-tempered, aggressive, assertive, headstrong, independent, alert, mechanically-inclined, physically active, self-promoting, self-centered in an unthinking way, and more thoughtless than mean. You have a general dislike for restraint of any kind, don't like to be told what to do, need to learn diplomacy and tact, need to look before leaping, need to better learn how to channel your energies for more constructive purposes and results. Like the ram who symbolizes this sign, you tend to butt your head against your problems hoping that with enough force you can eventually knock down whatever stands before you, including people. You like the challenges of life and are very competitive and sometimes combative. You get bored easily with routine and one thing you may need to practice more of is persistence. You tend to jump from one thing to another, always looking for something new. Finish what you start before moving on. Spiritual lesson to learn: Patience. Mars rules Aries so Mars will be important in your chart."
+        }
+      }
+    ]
+  }
+}

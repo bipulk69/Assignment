@@ -1,0 +1,96 @@
+{
+  "dosha": {
+    "kalsarpaDosha": [
+      {
+        "type": "KEY_PARAGRAPH",
+        "heading": "Kalsarpa Details",
+        "data": {
+          "present": false,
+          "one_line": "Kalsarpa dosha is not detected in your horoscope."
+        }
+      },
+      {
+        "type": "PARAGRAPH",
+        "heading": "Kalsarpa Remedies",
+        "data": [
+          "Install an energized Kaal Sarpa Yog yantra at the place of veneration or puja room at home and worship it daily.",
+          "Get a Kalsarpa dosha nivaran pooja performed on a Wednesday or Friday to negate the malefic effects of Rahu.",
+          "Rudrabhisheka - a puja to Lord Shiva can be performed on a solar or lunar eclipse or on Mahashivratri at Mahakaleshwar temple, Ujjain or Kashi Vishwanath temple or any other Shiv Temple.",
+          "Get a Dashansh Homa or Yajna done on Nag Panchami day in the month of Shravan in a temple or near a holy river.",
+          "Donate fresh reddish.",
+          "Wear a 14 faced rudraksha or a combination of 8+9 faced rudraksha."
+        ]
+      }
+    ],
+    "manglikDosha": [
+      {
+        "type": "KEY_PARAGRAPH",
+        "heading": "Manglik Details",
+        "data": {
+          "manglik_present_rule": {
+            "based_on_aspect": [
+              "Twelfth house of your birth chart is aspected by Rahu.",
+              "Rahu is aspecting eighth house of your birth chart.",
+              "Seventh house of your birth chart is aspected by Saturn",
+              "Mars is aspecting second house of your birth chart.",
+              "Ketu is aspecting second house of your birth chart.",
+              "Your first house in birth chart is aspected by planet Mars.",
+              "Fourth house of your birth chart is aspected by Sun",
+              "Fourth house of your birth chart is aspected by Ketu"
+            ],
+            "based_on_house": [
+              "Planet Saturn is in First house in your horoscope.",
+              "Planet Rahu is situated in Fourth house in your birth chart.",
+              "Seventh house is occupied by planet Mars in your birth chart."
+            ]
+          },
+          "manglik_cancel_rule": [],
+          "is_mars_manglik_cancelled": false,
+          "manglik_status": "EFFECTIVE",
+          "percentage_manglik_present": 24.75,
+          "percentage_manglik_after_cancellation": 24.75,
+          "manglik_report": "Manglik dosha has been detected in your horosocpe and the extent of mangal dosha present is effective and therefore needs due carefulness. You are manglik.",
+          "is_present": true,
+          "what_is_manglik_dosha_?": "In the boy or the girls horoscope when Mars,Sun,Saturn,Rahu Or Ketu is in ascendant, fourth house, seventh house, eighth house or twelth house then it is called Manglik dosh. Manglik dosh is considered stronger when Mars is placed in the ascendant than when Mars is conjoined with Moon in ascendant. If according to the Shastras the Manglik dosh of both the boy and the girl is getting cancelled then they are guaranteed a happily married life. On the other hand, if this Manglik dosh is not cancelled then they are likely to face unnecessary problems andhurdles in life. So one must begin his/her married life after getting their horoscopes thoroughly matched. After getting the Manglik dosh properly cancelled the native shall be bestowed with a peaceful and wealthy life."
+        }
+      },
+      {
+        "type": "PARAGRAPH",
+        "heading": "Manglik Remedies",
+        "data": [
+          "Install an energized Mangal Yantra in your place of worship. Meditate on the triangular Mangal Yantra along with the recitation of Mangal mantra: Om Kram Krim Krom Sah Bhomayay Namah",
+          "In the evening, visit a Hanuman temple draw a triangle with red kumkum (roli) on a plate and worship Hanumanji with sindoor or red sandalwood, red flowers and a lighted lamp.",
+          "Worship Lord Hanuman with the mantra:||OM SHREEM HANUMATE NAMAH||"
+        ]
+      }
+    ],
+    "sadhesatiAnalysis": [
+      {
+        "type": "KEY_PARAGRAPH",
+        "heading": "Sadhesati Details",
+        "data": {
+          "consideration_date": "19-1-2024",
+          "is_saturn_retrograde": false,
+          "moon_sign": "Scorpio",
+          "saturn_sign": "Aquarius",
+          "is_undergoing_sadhesati": "No, currently you are not undergoing Sadhesati.",
+          "sadhesati_status": false,
+          "what_is_sadhesati_?": "Sadhe Sati refers to the seven-and-a-half year period in which Saturn moves through three signs, the moon sign, one before the moon and the one after it. Sadhe Sati starts when Saturn (Shani) enters the 12th sign from the birth Moon sign and ends when Saturn leaves 2nd sign from the birth Moon sign.  Since Saturn approximately takes around two and half years to transit a sign which is called Shani's dhaiya  it takes around seven and half year to transit three signs  and that is why it is known as Sadhe Sati. Generally Sade-Sati comes thrice in a horoscope in the life time - first in childhood, second in youth & third in old-age. First Sade-Sati has effect on education & parents. Second Sade-Sati has effect on profession, finance & family. The last one affects health more than anything else."
+        }
+      },
+      {
+        "type": "PARAGRAPH",
+        "heading": "Sadhesati Remedies",
+        "data": [
+          "Give respect to your subordinate, servant, poor and lower class people.",
+          "Serve and respect your parents and elderly people.",
+          "Recite Shri Hanuman Chalisa.",
+          "Shani Yantra is used to pacify an afflicted Shani and get  blessings of Lord Shani. When Saturn is malefic in a horoscope due to wrong placement, Sadhe Sati or Small Affliction,  use of Shani Yantra is very Beneficial. ",
+          "It is good and beneficial to fast on Saturdays starting from sunrise to ending at sunset when Sadhe Sati is in effect.",
+          "Donate urad (a type of pulse), oil, sapphire, black sesame seeds, black buffalo, iron, money and black clothes as per your financial situation to poor and needy people.",
+          "Wearing of seven faced Rudraksha tends to mitigate the ill effects of Sadhe Sati."
+        ]
+      }
+    ]
+  }
+}
