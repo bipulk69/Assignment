@@ -33,12 +33,20 @@ function TabBtn({name, isSelected, onPress}) {
     <TouchableOpacity onPress={handlePress}>
       <View style={buttonStyle}>
         <Text style={{color: isSelected ? '#000F6B' : 'black', fontSize: 16}}>
-          {name}
+          {formatText(name)}
         </Text>
       </View>
     </TouchableOpacity>
   );
 }
+
+const formatText = text => {
+  const words = text.replace(/([a-z])([A-Z])/g, '$1 $2');
+  const formattedWords = words.split(' ').map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  return formattedWords.join(' ');
+};
 
 const MainScreen = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -70,15 +78,25 @@ const MainScreen = () => {
       return tabData.map((item, index) => {
         switch (item.type) {
           case 'KEY_VALUE':
-            return <KeyValue key={index} data={item.data} />;
+            return (
+              <KeyValue key={index} data={item.data} heading={item.heading} />
+            );
           case 'PARAGRAPH':
-            return <Paragraph key={index} data={item.data} />;
+            return <Paragraph key={index} data={item} />;
           case 'KEY_PARAGRAPH':
-            return <KeyParagraph key={index} data={item.data} />;
+            return (
+              <KeyParagraph
+                key={index}
+                data={item.data}
+                heading={item.heading}
+              />
+            );
           case 'TABLE':
-            return <Table key={index} data={item.data} />;
+            return (
+              <Table key={index} data={item.data} heading={item.heading} />
+            );
           case 'SPECIAL':
-            return <Special key={index} data={data} />;
+            return <Special key={index} data={data} heading={item.heading} />;
           default:
             return null;
         }
@@ -91,7 +109,9 @@ const MainScreen = () => {
       return tabData.map((item, index) => {
         switch (item.type) {
           case 'KEY_VALUE':
-            return <KeyValue key={index} data={item.data} />;
+            return (
+              <KeyValue key={index} data={item.data} heading={item.heading} />
+            );
           case 'PARAGRAPH':
             return <Paragraph key={index} data={item} />;
           case 'KEY_PARAGRAPH':
@@ -159,6 +179,7 @@ export default MainScreen;
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: '#FFFFFF',
     paddingHorizontal: 10,
   },
@@ -174,6 +195,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   contentContainer: {
-    marginTop: 20,
+    flex: 1,
   },
 });

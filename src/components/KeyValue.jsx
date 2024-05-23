@@ -1,54 +1,86 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import {formatHeader} from './Table';
 
-const KeyValue = ({data}) => {
+const KeyValue = ({data, heading}) => {
   const [keys, setKeys] = useState([]);
+  console.log(heading);
 
   useEffect(() => {
-    setKeys(Object.keys(data));
+    if (data && typeof data === 'object' && !Array.isArray(data)) {
+      setKeys(Object.keys(data));
+    }
   }, [data]);
+
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     return null;
   }
 
-  // const keys = Object.keys(data);
-  // console.log('Keyvalue:', data);
-  // console.log(keys);
-
   return (
     <View style={styles.container}>
-      {keys.map((dataKey, index) => {
-        console.log('Key:', dataKey);
-        return (
-          <View key={`${dataKey}-${index}`} style={styles.row}>
-            <Text>{dataKey.split('_').join(' ')}</Text>
-            <Text style={styles.value}>{data[dataKey]}</Text>
-          </View>
-        );
-      })}
+      <Text
+        style={{
+          marginHorizontal: 10,
+          marginVertical: 15,
+          fontSize: 22,
+          fontWeight: 500,
+        }}>
+        {heading}
+      </Text>
+      <View style={styles.headerRow}>
+        <Text style={styles.headerText}>Key</Text>
+        <Text style={styles.headerText}>Value</Text>
+      </View>
+      {keys.map((dataKey, index) => (
+        <View key={`${dataKey}-${index}`} style={styles.row}>
+          <Text style={styles.key}>{formatHeader(dataKey)}</Text>
+          <Text style={styles.value}>{data[dataKey]}</Text>
+        </View>
+      ))}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {},
+  headerRow: {
+    borderColor: 'black',
+    borderRadius: 5,
+    overflow: 'hidden',
+    flexDirection: 'row',
+    borderWidth: 1,
+    backgroundColor: '#f0f0f0',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#000',
+  },
+  headerText: {
+    flex: 1,
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#000',
+    textAlign: 'center',
+  },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    borderWidth: 1,
-    borderColor: 'black',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
   },
   key: {
+    flex: 1,
     fontWeight: 'bold',
-    fontSize: 35,
+    fontSize: 14,
     color: 'black',
-    marginTop: 100,
+    textAlign: 'center',
   },
   value: {
     flex: 1,
-    marginLeft: 10,
+    fontSize: 14,
+    color: 'black',
+    textAlign: 'center',
   },
 });
 

@@ -10,10 +10,10 @@ const Paragraph = ({data}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>{heading}</Text>
+      {heading && <Text style={styles.heading}>{heading}</Text>}
       {paragraphs.map((item, index) => (
         <View key={index} style={styles.paragraphContainer}>
-          <Text style={styles.paragraph}>{item}</Text>
+          <Text style={styles.paragraph}>* {item}</Text>
         </View>
       ))}
     </View>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     fontSize: 16,
-    color: 'black',
+    color: '#474747',
   },
 });
 
