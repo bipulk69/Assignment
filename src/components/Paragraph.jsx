@@ -1,21 +1,43 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-const ParagraphComponent = ({heading}) => {
+const Paragraph = ({data}) => {
+  if (!data || !data.data || !Array.isArray(data.data)) {
+    return null;
+  }
+
+  const {heading, data: paragraphs} = data;
+
   return (
-    <View>
-      <View>
-        <Text>{heading}</Text>
-        {data.map((paragraph, index) => (
-          <Text key={index} style={{marginVertical: 2, fontSize}}>
-            {paragraph}
-          </Text>
-        ))}
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.heading}>{heading}</Text>
+      {paragraphs.map((item, index) => (
+        <View key={index} style={styles.paragraphContainer}>
+          <Text style={styles.paragraph}>{item}</Text>
+        </View>
+      ))}
     </View>
   );
 };
 
-export default ParagraphComponent;
+const styles = StyleSheet.create({
+  container: {
+    marginBottom: 20,
+    padding: 10,
+  },
+  heading: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom: 10,
+    color: 'black',
+  },
+  paragraphContainer: {
+    marginBottom: 10,
+  },
+  paragraph: {
+    fontSize: 16,
+    color: 'black',
+  },
+});
 
-const styles = StyleSheet.create({});
+export default Paragraph;

@@ -12,13 +12,13 @@ const KeyValue = ({data}) => {
   }
 
   // const keys = Object.keys(data);
-  console.log('Keyvalue:', data);
-  console.log(keys);
+  // console.log('Keyvalue:', data);
+  // console.log(keys);
 
   return (
     <View style={styles.container}>
       {keys.map((dataKey, index) => {
-        console.log(dataKey, data[dataKey]);
+        console.log('Key:', dataKey);
         return (
           <View key={`${dataKey}-${index}`} style={styles.row}>
             <Text>{dataKey.split('_').join(' ')}</Text>
@@ -26,19 +26,6 @@ const KeyValue = ({data}) => {
           </View>
         );
       })}
-      {/* <FlatList
-        data={keys}
-        renderItem={({item}) => {
-          console.log('item', item);
-          return (
-            <View style={styles.row}>
-              <Text style={styles.key}>{item}</Text>
-              <Text style={styles.value}>{data[item]}</Text>
-            </View>
-          );
-        }}
-        keyExtractor={item => item}
-      /> */}
     </View>
   );
 };
@@ -48,10 +35,10 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // borderWidth: 10,
-    // borderColor: 'black',
-    // borderBottomWidth: 2,
-    // borderBottomColor: '#ccc',
+    borderWidth: 1,
+    borderColor: 'black',
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
   },
   key: {
     fontWeight: 'bold',

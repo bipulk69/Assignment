@@ -43,8 +43,6 @@ function TabBtn({name, isSelected, onPress}) {
 const MainScreen = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedType, setSelectedType] = useState(null);
-  console.log('selectedType', selectedType);
-  console.log('selectedCategory', selectedCategory);
 
   const keys = Object.keys(data);
 
@@ -58,75 +56,101 @@ const MainScreen = () => {
   };
 
   const subChildren =
-    selectedCategory && data[selectedCategory]
+    selectedCategory &&
+    data[selectedCategory] &&
+    !Array.isArray(data[selectedCategory])
       ? Object.keys(data[selectedCategory])
       : [];
 
   const renderTabContent = () => {
-    if (!selectedCategory || !selectedType) return null;
+    if (Array.isArray(data[selectedCategory])) {
+      if (!selectedCategory) return null;
+      const tabData = data[selectedCategory];
 
-    const tabData = data[selectedCategory][selectedType];
-    console.log('tabData', tabData);
+      return tabData.map((item, index) => {
+        switch (item.type) {
+          case 'KEY_VALUE':
+            return <KeyValue key={index} data={item.data} />;
+          case 'PARAGRAPH':
+            return <Paragraph key={index} data={item.data} />;
+          case 'KEY_PARAGRAPH':
+            return <KeyParagraph key={index} data={item.data} />;
+          case 'TABLE':
+            return <Table key={index} data={item.data} />;
+          case 'SPECIAL':
+            return <Special key={index} data={data} />;
+          default:
+            return null;
+        }
+      });
+    } else {
+      if (!selectedCategory || !selectedType) return null;
 
-    return tabData.map((item, index) => {
-      //   console.log('item', item);
-      switch (item.type) {
-        case 'KEY_VALUE':
-          return <KeyValue key={index} data={item.data} />;
-        case 'PARAGRAPH':
-          return (
-            <Paragraph key={index} data={item.data} heading={item.heading} />
-          );
-        case 'KEY_PARAGRAPH':
-          return (
-            <KeyParagraph key={index} data={item.data} heading={item.heading} />
-          );
-        case 'TABLE':
-          return <Table key={index} data={item.data} heading={item.heading} />;
-        case 'SPECIAL':
-          return (
-            <Special key={index} data={item.data} heading={item.heading} />
-          );
-        default:
-          return null;
-      }
-    });
+      const tabData = data[selectedCategory][selectedType];
+
+      return tabData.map((item, index) => {
+        switch (item.type) {
+          case 'KEY_VALUE':
+            return <KeyValue key={index} data={item.data} />;
+          case 'PARAGRAPH':
+            return <Paragraph key={index} data={item} />;
+          case 'KEY_PARAGRAPH':
+            console.log('KEY_PARAGRAPH:', item.data);
+            return <KeyParagraph key={index} data={item} />;
+          case 'TABLE':
+            return (
+              <Table key={index} data={item.data} heading={item.heading} />
+            );
+          case 'SPECIAL':
+            return (
+              <Special key={index} data={item.data} heading={item.heading} />
+            );
+          default:
+            return null;
+        }
+      });
+    }
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.heading}>
-        <Text style={styles.headingTitle}>Category:</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {keys.map(item => (
-            <TabBtn
-              key={item}
-              name={item}
-              isSelected={selectedCategory === item}
-              onPress={handlePressCategory}
-            />
-          ))}
-        </ScrollView>
-      </View>
-
-      {selectedCategory && data[selectedCategory] && (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <View style={styles.heading}>
-            <Text style={styles.headingTitle}>Types:</Text>
-
-            {subChildren.map(item => (
+      <View style={styles.headingContainer}>
+        <View style={styles.heading}>
+          <Text style={styles.headingTitle}>Category:</Text>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {keys.map(item => (
               <TabBtn
                 key={item}
                 name={item}
-                isSelected={selectedType === item}
-                onPress={handlePressType}
+                isSelected={selectedCategory === item}
+                onPress={handlePressCategory}
               />
             ))}
-          </View>
-        </ScrollView>
-      )}
+          </ScrollView>
+        </View>
 
-      <View style={styles.contentContainer}>{renderTabContent()}</View>
+        {selectedCategory && data[selectedCategory] && (
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {subChildren.length > 0 && (
+              <View style={styles.heading}>
+                <Text style={styles.headingTitle}>Types:</Text>
+                {subChildren.map(item => (
+                  <TabBtn
+                    key={item}
+                    name={item}
+                    isSelected={selectedType === item}
+                    onPress={handlePressType}
+                  />
+                ))}
+              </View>
+            )}
+          </ScrollView>
+        )}
+      </View>
+
+      <ScrollView style={styles.contentContainer}>
+        {renderTabContent()}
+      </ScrollView>
     </View>
   );
 };
@@ -136,9 +160,9 @@ export default MainScreen;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
-    marginTop: 20,
     paddingHorizontal: 10,
   },
+  headingContainer: {},
   heading: {
     flexDirection: 'row',
     marginBottom: 10,
